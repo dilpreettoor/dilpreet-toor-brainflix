@@ -1,12 +1,100 @@
-.header {
+.header-nav {
   display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
 }
-.header__search-input {
-  background: url(../../assets/icons/search.svg) no-repeat;
-  padding-left: 2rem;
+@media (min-width: 768px) {
+  .header-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
-.header__profile-photo {
+@media (min-width: 1280px) {
+  .header-nav {
+    padding: 1.2rem 10%;
+  }
+}
+.header-nav__logo {
+  width: 7.4rem;
+  align-self: center;
+}
+.header-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .header-nav__wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.header-nav__search {
+  display: flex;
+  border-radius: 0.3rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.header-nav__search-input {
+  background: url(../../assets/icons/search.svg) no-repeat 0.7rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.25rem;
+  padding-left: 3rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .header-nav__search-input {
+    height: 2.5rem;
+    margin-top: -1rem;
+    width: 15rem;
+  }
+}
+.header-nav__profile-photo {
   border-radius: 50%;
+  margin-left: 1rem;
   width: 2.25rem;
   height: 2.25rem;
+}
+@media (min-width: 768px) {
+  .header-nav__profile-photo {
+    display: none;
+  }
+}
+.header-nav__profile-tablet {
+  border-radius: 50%;
+  display: none;
+  margin-left: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+@media (min-width: 768px) {
+  .header-nav__profile-tablet {
+    display: flex;
+    align-self: centre;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.header-nav__upload-btn {
+  position: relative;
+  width: 100%;
+  border-style: none;
+  align-items: center;
+  color: white;
+  border-radius: 0.2rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  background-color: #0095ff;
+}
+@media (min-width: 768px) {
+  .header-nav__upload-btn {
+    margin-top: 0;
+    margin-left: 1.2rem;
+    width: 10rem;
+  }
+}
+.header-nav__upload-btn::before {
+  position: absolute;
+  content: url("../../assets/icons/upload.svg");
+  top: 0.4rem;
+  left: 0.4rem;
 }/*# sourceMappingURL=header.css.map */

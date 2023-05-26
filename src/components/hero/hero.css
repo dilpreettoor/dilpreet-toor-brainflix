@@ -1,0 +1,28 @@
+.hero-video {
+  position: relative;
+  justify-content: center;
+  padding-bottom: 56.25%;
+  background-color: black;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .hero-video {
+    padding-bottom: 50.25%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-video {
+    padding-bottom: 36.25%;
+  }
+}
+.hero-video__poster {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/* References
+
+https://css-tricks.com/aspect-ratio-boxes/
+
+*//*# sourceMappingURL=hero.css.map */
