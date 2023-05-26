@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+}
+.header__search-input {
+  background: url(../../assets/icons/search.svg) no-repeat;
+  padding-left: 2rem;
+}
+.header__profile-photo {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}/*# sourceMappingURL=header.css.map */
