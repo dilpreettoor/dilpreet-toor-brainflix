@@ -1,0 +1,25 @@
+.hero-info {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.hero-info__title {
+  font-size: 2rem;
+}
+.hero-info__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.hero-info__views::before {
+  content: url("../../assets/icons/views.svg");
+  position: relative;
+  top: 0.2rem;
+}
+.hero-info__likes::before {
+  content: url("../../assets/icons/likes.svg");
+  position: relative;
+  top: 0.2rem;
+}/*# sourceMappingURL=videoInfo.css.map */
