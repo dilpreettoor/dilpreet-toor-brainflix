@@ -1,0 +1,17 @@
+.videolist {
+  display: flex;
+  flex-direction: column;
+}
+.videolist__video-img {
+  height: 3.7rem;
+  width: 6rem;
+  margin-right: 1rem;
+}
+.videolist__video-container {
+  display: flex;
+}
+.videolist__video-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}/*# sourceMappingURL=videoslist.css.map */

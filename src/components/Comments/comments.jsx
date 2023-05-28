@@ -2,7 +2,7 @@ import "./comments.scss";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments(props) {
-  const date = new Date(props.selectedVideo.timestamp);
+  const date = new Date(props.selectedVideo.comments[0].timestamp);
   const formatedDate = date.toLocaleDateString("en-US");
   return (
     <section className="comments">
@@ -39,16 +39,13 @@ function Comments(props) {
           ></img>
           <div className="comments__comment-body">
             <div className="comments__comment-title">
-              <span className="comments__comment-title--name">NAME</span>
+              <span className="comments__comment-title--name">{props.selectedVideo.comments[0].name}</span>
 
-              <span className="comments__comment-title--date">DD/MM/YYYY</span>
+              <span className="comments__comment-title--date">{formatedDate}</span>
             </div>
 
             <p className="comments__comment-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis, eligendi fugiat fuga nobis, vero hic dolores nam et
-              sapiente maxime laborum porro vitae. Ex dolor, quis reiciendis aut
-              saepe odit?
+            {props.selectedVideo.comments[0].comment}
             </p>
           </div>
         </div>
