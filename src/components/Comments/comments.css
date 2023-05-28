@@ -58,6 +58,12 @@
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+.comments__comment-text {
+  width: 100%;
+}
+.comments__comment-body {
+  width: 100%;
+}
 .comments__comment-profile {
   border-radius: 50%;
   width: 2.25rem;

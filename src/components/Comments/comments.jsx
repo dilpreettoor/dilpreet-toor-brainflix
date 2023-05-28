@@ -2,8 +2,7 @@ import "./comments.scss";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments(props) {
-  const date = new Date(props.selectedVideo.comments[0].timestamp);
-  const formatedDate = date.toLocaleDateString("en-US");
+  
   return (
     <section className="comments">
       <h2 className="comments__count">
@@ -31,24 +30,28 @@ function Comments(props) {
       </div>
 
       <div className="comments__comments-list">
-        <div className="comments__comment">
-          <img
+        
+            {props.selectedVideo.comments.map((comment, index) => (
+                <div className="comments__comment">
+                <img
             className="comments__comment-profile"
             src={profile}
             alt="profile picture"
           ></img>
           <div className="comments__comment-body">
             <div className="comments__comment-title">
-              <span className="comments__comment-title--name">{props.selectedVideo.comments[0].name}</span>
+              <span className="comments__comment-title--name">{comment.name}</span>
 
-              <span className="comments__comment-title--date">{formatedDate}</span>
+              <span className="comments__comment-title--date">{new Date(comment.timestamp).toLocaleDateString('en-US')}</span>
             </div>
 
             <p className="comments__comment-text">
-            {props.selectedVideo.comments[0].comment}
+            {comment.comment}
             </p>
           </div>
         </div>
+            ))}
+          
       </div>
     </section>
   );
