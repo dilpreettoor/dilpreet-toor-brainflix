@@ -16,7 +16,16 @@ function App() {
     videoDetailsJSON[0]
   );
 
-  console.log(selectedVideo);
+  const handleSelectVideo = (id) => {
+    videosData.forEach((video) => {
+      if (id === video.id) {
+        setSelectedVideo(video);
+        console.log(video);
+      }
+    });
+  }
+
+ 
 
 
   return (
@@ -25,7 +34,7 @@ function App() {
       <Hero selectedVideo={selectedVideo}/>
       <VideoInfo selectedVideo={selectedVideo}/>
       <Comments selectedVideo={selectedVideo}/>
-      <VideosList selectedVideo={selectedVideo}/>
+      <VideosList selectedVideo={selectedVideo} videos={videosData} handleSelectVideo={handleSelectVideo}/>
       
     </div>
   );
