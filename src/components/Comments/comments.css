@@ -1,0 +1,66 @@
+.comments {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.comments__form {
+  margin-left: 1.2rem;
+  width: 100%;
+}
+.comments__form-profile {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.comments__form-txt {
+  resize: none;
+  height: 5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+.comments__wrapper-row {
+  display: flex;
+  flex-direction: row;
+}
+.comments__wrapper-column {
+  display: flex;
+  flex-direction: column;
+}
+.comments__btn {
+  background-color: #0095ff;
+  color: #fff;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  position: relative;
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+}
+.comments__btn::before {
+  content: url(../../assets/icons/add_comment.svg);
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+.comments__comments-list {
+  margin-top: 1rem;
+}
+.comments__comment {
+  padding-top: 1rem;
+  display: flex;
+  border-top: 1px solid #e0e0e0;
+}
+.comments__comment:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+.comments__comment-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.comments__comment-profile {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-right: 1rem;
+}/*# sourceMappingURL=comments.css.map */
