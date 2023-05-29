@@ -18,9 +18,29 @@
   margin-left: 1.2rem;
   width: 100%;
 }
+.comments__comment-info {
+  display: flex;
+  flex-direction: column;
+}
+.comments__form-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .comments__form-container {
+    flex-direction: row;
+    width: 100%;
+    height: 5rem;
+  }
+}
 .comments__comment-box-title {
   color: #AFAFAF;
   margin-bottom: 0.2rem;
+}
+@media (min-width: 768px) {
+  .comments__comment-box-title {
+    margin-bottom: 0;
+  }
 }
 .comments__form-profile {
   border-radius: 50%;
@@ -32,6 +52,12 @@
   height: 8rem;
   width: 100%;
   border-radius: 0.25rem;
+}
+@media (min-width: 768px) {
+  .comments__form-txt {
+    height: 3rem;
+    width: 60vw;
+  }
 }
 .comments__form-txt::-moz-placeholder {
   color: #323232;
@@ -67,6 +93,13 @@
   position: absolute;
   top: 0.5rem;
   left: 1rem;
+}
+@media (min-width: 768px) {
+  .comments__btn {
+    width: 18%;
+    height: 3rem;
+    margin-left: 2rem;
+  }
 }
 .comments__comments-list {
   margin-top: 1rem;

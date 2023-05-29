@@ -18,12 +18,14 @@ function Comments(props) {
 
         <form className="comments__form">
           <div className="comments__form-container">
+            <div className="comments__comment-info">
             <h3 className="comments__comment-box-title">JOIN THE CONVERSATION</h3>
             <textarea
               className="comments__form-txt"
               type="text"
               placeholder="Add a new comment"
             ></textarea>
+            </div>
             <button className="comments__btn">Comment</button>
           </div>
         </form>

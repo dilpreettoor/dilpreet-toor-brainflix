@@ -16,6 +16,11 @@
 .videolist__title {
   margin-bottom: 2rem;
 }
+@media (min-width: 1280px) {
+  .videolist {
+    border-left: 1px solid #E1E1E1;
+  }
+}
 .videolist__video-img {
   height: 3.7rem;
   width: 6rem;

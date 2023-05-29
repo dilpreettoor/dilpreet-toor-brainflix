@@ -30,12 +30,18 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
-      <Hero selectedVideo={selectedVideo}/>
-      <VideoInfo selectedVideo={selectedVideo}/>
-      <Comments selectedVideo={selectedVideo}/>
-      <VideosList selectedVideo={selectedVideo} videos={videosData} handleSelectVideo={handleSelectVideo}/>
       
+      <Header/>  
+      <Hero selectedVideo={selectedVideo}/>
+      <div className='main-content'>
+      <div className="side-content">
+      <VideoInfo selectedVideo={selectedVideo}/>
+      <Comments selectedVideo={selectedVideo}/> 
+      </div>
+      <div className="side-content">
+      <VideosList selectedVideo={selectedVideo} videos={videosData} handleSelectVideo={handleSelectVideo}/>
+      </div>
+      </div>
     </div>
   );
 }
