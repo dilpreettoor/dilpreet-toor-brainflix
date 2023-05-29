@@ -1,8 +1,18 @@
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff");
+  font-weight: 400;
+}
 .hero-video {
   position: relative;
   justify-content: center;
   padding-bottom: 56.25%;
-  background-color: black;
+  background-color: #000000;
   display: flex;
 }
 @media (min-width: 768px) {

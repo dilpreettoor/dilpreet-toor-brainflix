@@ -5,10 +5,9 @@ import './header.scss';
 function Header() {
     return (
         <header className='header-nav'>
-           <img 
-           className='header-nav__logo'
-           src={logo}
-           alt='Brainflix logo' />
+           <a href='/' className='header-nav__logo'>
+        <img src={logo} alt='Brainflix logo' />
+           </a>
             <div 
             className='header-nav__wrapper'>
            <div 

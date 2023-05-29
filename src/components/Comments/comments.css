@@ -1,11 +1,26 @@
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff");
+  font-weight: 400;
+}
 .comments {
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
+  font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 .comments__form {
   margin-left: 1.2rem;
   width: 100%;
+}
+.comments__comment-box-title {
+  color: #AFAFAF;
+  margin-bottom: 0.2rem;
 }
 .comments__form-profile {
   border-radius: 50%;
@@ -14,13 +29,24 @@
 }
 .comments__form-txt {
   resize: none;
-  height: 5rem;
+  height: 8rem;
   width: 100%;
   border-radius: 0.25rem;
+}
+.comments__form-txt::-moz-placeholder {
+  color: #323232;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+.comments__form-txt::placeholder {
+  color: #323232;
+  padding: 0.4rem;
+  font-size: 1.2rem;
 }
 .comments__wrapper-row {
   display: flex;
   flex-direction: row;
+  margin: 1.5rem 0;
 }
 .comments__wrapper-column {
   display: flex;

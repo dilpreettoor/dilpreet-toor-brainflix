@@ -1,7 +1,18 @@
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff");
+  font-weight: 400;
+}
 .header-nav {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
+  font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 @media (min-width: 768px) {
   .header-nav {
@@ -36,7 +47,9 @@
 }
 .header-nav__search-input {
   background: url(../../assets/icons/search.svg) no-repeat 0.7rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #AFAFAF;
+  background-color: #FAFAFA;
+  color: #323232;
   border-radius: 0.25rem;
   padding-left: 3rem;
   width: 100%;
@@ -83,7 +96,7 @@
   border-radius: 0.2rem;
   height: 2.5rem;
   margin-top: 1rem;
-  background-color: #0095ff;
+  background-color: #0095FF;
 }
 @media (min-width: 768px) {
   .header-nav__upload-btn {

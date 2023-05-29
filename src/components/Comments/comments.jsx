@@ -18,7 +18,7 @@ function Comments(props) {
 
         <form className="comments__form">
           <div className="comments__form-container">
-            <h3>JOIN THE CONVERSATION</h3>
+            <h3 className="comments__comment-box-title">JOIN THE CONVERSATION</h3>
             <textarea
               className="comments__form-txt"
               type="text"
@@ -40,7 +40,7 @@ function Comments(props) {
           ></img>
           <div className="comments__comment-body">
             <div className="comments__comment-title">
-              <span className="comments__comment-title--name">{comment.name}</span>
+              <h2 className="comments__comment-title--name">{comment.name}</h2>
 
               <span className="comments__comment-title--date">{new Date(comment.timestamp).toLocaleDateString('en-US')}</span>
             </div>

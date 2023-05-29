@@ -1,10 +1,36 @@
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff");
+  font-weight: 400;
+}
 .hero-info {
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
+  font-family: AvenirNextLTPro-Regular, sans-serif;
 }
 .hero-info__title {
   font-size: 2rem;
+  font-family: AvenirNextLTPro-Bold, sans-serif;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .hero-info__title {
+    padding-bottom: 0rem;
+  }
+}
+.hero-info__channel {
+  font-family: AvenirNextLTPro-Bold, sans-serif;
+}
+@media (min-width: 768px) {
+  .hero-info__channel {
+    padding-right: 2rem;
+  }
 }
 .hero-info__wrapper {
   display: flex;
@@ -12,14 +38,58 @@
   justify-content: space-between;
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
+  padding: 1.2rem 0;
+}
+@media (min-width: 768px) {
+  .hero-info__wrapper {
+    border-top: none;
+  }
+}
+.hero-info__wrapper-left {
+  display: flex;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .hero-info__wrapper-left {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.hero-info__wrapper-right {
+  display: flex;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .hero-info__wrapper-right {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.hero-info__views {
+  color: #AFAFAF;
 }
 .hero-info__views::before {
   content: url("../../assets/icons/views.svg");
   position: relative;
   top: 0.2rem;
 }
+@media (min-width: 768px) {
+  .hero-info__views {
+    padding-right: 2rem;
+  }
+}
+.hero-info__likes {
+  color: #AFAFAF;
+}
 .hero-info__likes::before {
   content: url("../../assets/icons/likes.svg");
   position: relative;
   top: 0.2rem;
+}
+.hero-info__date {
+  color: #AFAFAF;
+}
+.hero-info__description {
+  padding: 1.4rem 0;
+  line-height: 1.3rem;
 }/*# sourceMappingURL=videoInfo.css.map */

@@ -15,7 +15,7 @@ function VideosList(props) {
                     </img>
 
                     <div className='videolist__video-details'>
-                        <p className='videolist__video-title'>{video.title}</p>
+                        <h2 className='videolist__video-title'>{video.title}</h2>
                         <p className='videolist__video-channel'>{video.channel}</p>
                     </div>
                 </div>
