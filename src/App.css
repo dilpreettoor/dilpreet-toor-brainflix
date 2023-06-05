@@ -2,18 +2,16 @@
   box-sizing: border-box;
   font-size: 100%;
   margin: 0;
-}/*# sourceMappingURL=App.css.map */
+}
 
 .main-content {
   display: flex;
 }
-
-.side-content {
+.main-content .side-content {
   flex-grow: 1;
 }
-
 @media screen and (max-width: 1280px) {
   .main-content {
     flex-direction: column;
   }
-}
+}/*# sourceMappingURL=App.css.map */
