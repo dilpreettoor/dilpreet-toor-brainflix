@@ -1,4 +1,4 @@
-import "./comments.scss";
+import "./comments.css";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments(props) {
