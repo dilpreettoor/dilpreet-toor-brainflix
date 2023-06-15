@@ -1,4 +1,4 @@
-import './videoInfo.scss';
+import './videoInfo.css';
 
 
 function VideoInfo(props) {
