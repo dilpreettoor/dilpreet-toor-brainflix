@@ -14,11 +14,27 @@
         margin: 1.2rem 0; 
     }
 
+    &__wrapper {
+
+        @include mixins.tablet {
+            border-top: 1px solid variables.$mercury;
+            border-bottom: 1px solid variables.$mercury;
+            margin-bottom: 1rem;
+        } 
+    }
+
     &__thumbnail {
         border-radius: .25rem;  
         margin-bottom: 1.2rem;
         height: 50vw;
         width: 100%;
+        
+        @include mixins.tablet {
+
+            width: 55%;
+            height: 40vw;
+            object-fit: cover;
+        }
     }
 
     &__thumbnail-title {
@@ -26,10 +42,6 @@
         margin-bottom: 0.5rem;
     }
 
-    &__button-wrap {
-        display: flex;
-        flex-direction: column; 
-    }
 
     &__publish-btn {
         color: white;
@@ -38,6 +50,12 @@
         height: 2.5rem;
         background-color: #0095FF;
         position: relative;
+
+        @include mixins.tablet {
+            width: 9rem;
+            margin-left: 2rem;
+            height: 3rem;
+        }
     }
 
     &__publish-btn::before {
@@ -46,12 +64,17 @@
         top: 50%;
         left: 0.4rem;
         transform: translateY(-50%);
+
+        
       }
 
       &__button-wrap {
         display: flex;
-        flex-direction: column;
-        overflow: hidden; 
+        flex-direction: column; 
+        @include mixins.tablet {
+            flex-direction: row-reverse; 
+            align-items: center;
+        }
       }
     
 
@@ -102,5 +125,6 @@
         background-color: white;
         color: #0095FF;
         padding: 2rem;
+
     }
 }

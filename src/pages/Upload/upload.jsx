@@ -9,9 +9,11 @@ const Upload = () => {
     <div>
       <Header/>
       <section className='upload'>
+        
         <h1 className='upload__title'>
             Upload Video
         </h1>
+        <div className='upload__wrapper'>
         <h2 className='upload__thumbnail-title'>
             VIDEO THUMBNAIL
         </h2>
@@ -23,11 +25,12 @@ const Upload = () => {
           <h2 className='upload__video-desc'>ADD A VIDEO DESCRIPTION</h2>
           <textarea className='upload__video-desc--text' placeholder='Add a description to your video'/>
         </div>
-
+        </div>
         <div className='upload__button-wrap'>
           <button className='upload__publish-btn'>PUBLISH</button>
           <button className='upload__cancel-btn'>CANCEL</button>
         </div>
+        
       </section>
     </div>
   );
