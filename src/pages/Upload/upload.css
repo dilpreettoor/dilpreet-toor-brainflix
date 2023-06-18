@@ -1,0 +1,38 @@
+.upload {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  border-top: 1px solid black;
+}
+.upload__thumbnail {
+  border-radius: 0.25rem;
+  height: 50vw;
+  width: 100%;
+}
+.upload__button-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.upload__publish-btn {
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #0095FF;
+  position: relative;
+}
+.upload__video-details {
+  display: flex;
+  flex-direction: column;
+}
+.upload__video-desc--text {
+  all: unset;
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  height: 5rem;
+}
+.upload__cancel-btn {
+  border: none;
+  background-color: white;
+  color: #0095FF;
+}/*# sourceMappingURL=upload.css.map */

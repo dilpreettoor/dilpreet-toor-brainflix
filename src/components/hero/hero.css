@@ -25,6 +25,7 @@
     padding-bottom: 36.25%;
   }
 }
+
 .hero-video__poster {
   height: 100%;
   position: absolute;
@@ -32,7 +33,5 @@
 }
 
 /* References
-
 https://css-tricks.com/aspect-ratio-boxes/
-
 *//*# sourceMappingURL=hero.css.map */

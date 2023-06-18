@@ -1,4 +1,4 @@
-import "./comments.scss";
+import "./comments.css";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments(props) {
@@ -34,7 +34,7 @@ function Comments(props) {
       <div className="comments__comments-list">
         
             {props.selectedVideo.comments.map((comment, index) => (
-                <div className="comments__comment">
+                <div key={index} className="comments__comment">
                 <img
             className="comments__comment-profile"
             src={profile}

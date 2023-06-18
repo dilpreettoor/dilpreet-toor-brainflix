@@ -1,4 +1,4 @@
-import './videoslist.scss';
+import './videoslist.css';
 
 
 function VideosList(props) {

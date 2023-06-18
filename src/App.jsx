@@ -1,13 +1,10 @@
-import Header from './components/header/header';
-import Hero from './components/hero/hero';
-import VideoInfo from './components/videoDetails/videoInfo';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import videoDetailsJSON from '../src/data/video-details.json';
-import Comments from './components/Comments/comments';
-import VideosList from './components/videoslist/videoslist';
-
-
+import React, {useEffect, useState } from "react";
+import axios from "axios";
+import Home from './pages/Home/home';
+import Upload from './pages/Upload/upload';
 import './App.css';
-import { useState } from 'react';
 
 function App() {
 
@@ -15,6 +12,10 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState(
     videoDetailsJSON[0]
   );
+
+  useEffect(() => {
+
+  })
 
   const handleSelectVideo = (id) => {
     videosData.forEach((video) => {
@@ -30,18 +31,12 @@ function App() {
 
   return (
     <div className="App">
-      
-      <Header/>  
-      <Hero selectedVideo={selectedVideo}/>
-      <div className='main-content'>
-      <div className="side-content">
-      <VideoInfo selectedVideo={selectedVideo}/>
-      <Comments selectedVideo={selectedVideo}/> 
-      </div>
-      <div className="side-content">
-      <VideosList selectedVideo={selectedVideo} videos={videosData} handleSelectVideo={handleSelectVideo}/>
-      </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home videosData={videosData} selectedVideo={selectedVideo} handleSelectVideo={handleSelectVideo} />} />
+          <Route path="/upload" element={<Upload />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
