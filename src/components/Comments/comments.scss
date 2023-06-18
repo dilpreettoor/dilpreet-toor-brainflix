@@ -1,16 +1,12 @@
-@import '../../assets/fonts/AvenirNextLTPro-Bold.otf';
-@import '../../assets/fonts/AvenirNextLTPro-Regular.otf';
-@import '../../styles/partials/mixins.css';
-@import '../../styles/partials/variables.css';
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/variables';
 
-$font-family-bold: "AvenirNextBold";
-$font-family-regular: "AvenirNextRegular";
 
 .comments {
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
-  font-family: $font-family-regular, sans-serif;
+  @include mixins.font(AvenirNextRegular);
 
   &__form {
     margin-left: 1.2rem;

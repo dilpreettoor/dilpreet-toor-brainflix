@@ -12,7 +12,7 @@
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
-  font-family: AvenirNextLTPro-Regular, sans-serif;
+  font-family: AvenirNextRegular, sans-serif;
 }
 .comments__form {
   margin-left: 1.2rem;

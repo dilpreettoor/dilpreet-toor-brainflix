@@ -1,13 +1,33 @@
+@font-face {
+  font-family: "AvenirNextBold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextRegular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff");
+  font-weight: 400;
+}
 .upload {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
-  border-top: 1px solid black;
+  border-top: 1px solid #E1E1E1;
+  font-family: AvenirNextRegular, sans-serif;
+}
+.upload__title {
+  font-size: 2.5rem;
+  margin: 1.2rem 0;
 }
 .upload__thumbnail {
   border-radius: 0.25rem;
+  margin-bottom: 1.2rem;
   height: 50vw;
   width: 100%;
+}
+.upload__thumbnail-title {
+  color: #AFAFAF;
+  margin-bottom: 0.5rem;
 }
 .upload__button-wrap {
   display: flex;
@@ -17,22 +37,66 @@
   color: white;
   border: none;
   border-radius: 0.25rem;
+  height: 2.5rem;
   background-color: #0095FF;
   position: relative;
+}
+.upload__publish-btn::before {
+  position: absolute;
+  content: url("../../assets/icons/publish.svg");
+  top: 50%;
+  left: 0.4rem;
+  transform: translateY(-50%);
+}
+.upload__button-wrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.upload__video-title {
+  color: #AFAFAF;
+  margin-bottom: 0.5rem;
 }
 .upload__video-details {
   display: flex;
   flex-direction: column;
 }
+.upload__video-desc {
+  color: #AFAFAF;
+  margin-bottom: 0.5rem;
+}
 .upload__video-desc--text {
   all: unset;
-  border: 1px solid grey;
+  border: 1px solid #E1E1E1;
+  background-color: #FAFAFA;
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
   border-radius: 0.25rem;
   line-height: 2rem;
   height: 5rem;
+}
+.upload__video-desc--text::-moz-placeholder {
+  color: #323232;
+}
+.upload__video-desc--text::placeholder {
+  color: #323232;
+}
+.upload__video-title--text {
+  background-color: #FAFAFA;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 0.25rem;
+}
+.upload__video-title--text::-moz-placeholder {
+  color: #323232;
+}
+.upload__video-title--text::placeholder {
+  color: #323232;
 }
 .upload__cancel-btn {
   border: none;
   background-color: white;
   color: #0095FF;
+  padding: 2rem;
 }/*# sourceMappingURL=upload.css.map */
