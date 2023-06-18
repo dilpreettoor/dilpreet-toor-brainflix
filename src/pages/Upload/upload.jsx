@@ -14,10 +14,12 @@ const Upload = () => {
             Upload Video
         </h1>
         <div className='upload__wrapper'>
+          <div className='upload__thumbnail-wrapper'>
         <h2 className='upload__thumbnail-title'>
             VIDEO THUMBNAIL
         </h2>
         <img className='upload__thumbnail' src={uploadimg} alt="👾"/>
+        </div>
         <div className='upload__video-details'>
           <h2 className='upload__video-title'>TITLE YOUR VIDEO</h2>
           <input className='upload__video-title--text' placeholder='Add a title to your video'/>
