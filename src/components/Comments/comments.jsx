@@ -1,13 +1,41 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./comments.css";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments(props) {
+  const [loading, setLoading] = useState(true);
+  const [comments, setComments] = useState([null]);
+
+  useEffect(() => {
+    if (props.selectedVideo) {
+      axios
+        .get(
+          `https://project-2-api.herokuapp.com/videos/${props.selectedVideo.id}?api_key=dilpreetsite`
+        )
+        .then((response) => {
+          setComments(response.data.comments);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log("Error fetching comments:", error);
+        });
+    }
+  }, [props.selectedVideo]);
+  if (!props.selectedVideo || loading) {
+    return <div>Loading...</div>; 
+  }
+
+  if (comments.length === 0) {
+    return <div>No comments available.</div>; // 
+  }
+
   
   return (
     <section className="comments">
       <h2 className="comments__count">
         {" "}
-        {props.selectedVideo.comments.length} Comments
+        {comments.length} Comments
       </h2>
       <div className="comments__wrapper-row">
         <img
@@ -33,8 +61,8 @@ function Comments(props) {
 
       <div className="comments__comments-list">
         
-            {props.selectedVideo.comments.map((comment, index) => (
-                <div className="comments__comment">
+            {comments.map((comment, index) => (
+                <div key={index} className="comments__comment">
                 <img
             className="comments__comment-profile"
             src={profile}

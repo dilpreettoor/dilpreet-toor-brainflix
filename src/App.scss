@@ -1,0 +1,19 @@
+$box-sizing: border-box;
+
+* {
+  box-sizing: $box-sizing;
+  font-size: 100%;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+
+  .side-content {
+    flex-grow: 1;
+  }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
+}

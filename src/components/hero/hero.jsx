@@ -1,7 +1,12 @@
+import React from "react";
 import './hero.css';
 
 
 function Hero(props) {
+  
+  if (!props.selectedVideo) {
+    return <div>Loading...</div>; 
+  }
     return (
         <section className='hero-video'>
           <video 

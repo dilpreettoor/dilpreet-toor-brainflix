@@ -1,0 +1,40 @@
+
+
+//colors
+$brainflix-black: #323232;
+$silver: #AFAFAF;
+$white: #ffffff;
+$brainflix-darkblack: #000000;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+$error: #D22D2D;
+$brainflix-blue: #0095FF;
+$brainflix-darkblue: #0065AD;
+
+
+//api
+$api-key: "dilpreetBrainFlix";
+$api-url: "https://project-2-api.herokuapp.com/";
+
+
+
+// screen sizes
+$tablet-width: 768px;
+$desktop-width: 1280px;
+
+// font face
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff2"),
+         url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("woff");
+         
+         font-weight: 700;
+}
+
+
+@font-face {
+    font-family: "AvenirNextRegular";
+    src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff2"),
+         url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("woff");
+    font-weight: 400;
+}

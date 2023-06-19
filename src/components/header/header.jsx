@@ -1,5 +1,6 @@
 import logo from '../../assets/logo/BrainFlix-logo.svg';
 import profile from '../../assets/images/Mohan-muruge.jpg'
+import { Link } from 'react-router-dom';
 import './header.css';
 
 function Header() {
@@ -27,10 +28,11 @@ function Header() {
                 
 
            </div>
-           <button
+           <Link
+           to="/upload"
            className='header-nav__upload-btn'>
-            Upload
-           </button>
+            UPLOAD
+           </Link>
 
                 <img
                 className='header-nav__profile-tablet'

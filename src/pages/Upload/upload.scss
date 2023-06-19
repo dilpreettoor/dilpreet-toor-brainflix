@@ -1,0 +1,150 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/variables';
+
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    border-top: 1px solid variables.$mercury;
+    @include mixins.font(AvenirNextRegular);
+
+    &__title {
+        font-size: 2.5rem;
+        margin: 1.2rem 0; 
+    }
+
+    &__wrapper {
+
+        @include mixins.tablet {
+            border-top: 1px solid variables.$mercury;
+            border-bottom: 1px solid variables.$mercury;
+            margin-bottom: 1rem;
+            padding-top: 0.8rem;
+        } 
+
+        @include mixins.desktop {
+            display: flex;
+        } 
+    }
+
+    &__thumbnail {
+        border-radius: .25rem;  
+        margin-bottom: 1.2rem;
+        height: 50vw;
+        width: 100%;
+        
+        @include mixins.tablet {
+
+            width: 55%;
+            height: 40vw;
+            object-fit: cover;
+        }
+
+        @include mixins.desktop {
+
+            width: 100%;
+            height: 20vw;
+            object-fit: cover;
+        }
+    }
+
+    &__thumbnail-wrapper {
+        margin-right: 2rem;
+    }
+
+    &__thumbnail-title {
+        color: variables.$silver;
+        margin-bottom: 0.5rem;
+    }
+
+
+    &__publish-btn {
+        color: white;
+        border: none;
+        border-radius: .25rem;
+        height: 2.5rem;
+        background-color: #0095FF;
+        position: relative;
+
+        @include mixins.tablet {
+            width: 9rem;
+            margin-left: 2rem;
+            height: 3rem;
+        }
+    }
+
+    &__publish-btn::before {
+        position: absolute;
+        content: url("../../assets/icons/publish.svg");
+        top: 50%;
+        left: 0.4rem;
+        transform: translateY(-50%);
+
+        
+      }
+
+      &__button-wrap {
+        display: flex;
+        flex-direction: column; 
+        @include mixins.tablet {
+            flex-direction: row-reverse; 
+            align-items: center;
+        }
+      }
+    
+
+    &__video-title {
+        color: variables.$silver;
+        margin-bottom: 0.5rem;
+    }
+
+    &__video-details {
+        display: flex;
+        flex-direction: column;
+
+        @include mixins.desktop {
+            width: 80%;
+        } 
+    }
+
+    &__video-desc {
+        color: variables.$silver;
+        margin-bottom: 0.5rem;
+    }
+    
+    &__video-desc--text {
+        all: unset;
+        border: 1px solid variables.$mercury;
+        background-color: variables.$alabaster;
+        padding: 0.5rem;
+        margin-bottom: 1.2rem;
+        border-radius: 0.25rem;
+        line-height: 2rem;
+        height: 5rem;
+
+        &::placeholder {
+            color: variables.$brainflix-black; 
+          }
+    }
+
+    &__video-title--text {
+        background-color: variables.$alabaster;
+        padding: 0.5rem;
+        margin-bottom: 0.8rem;
+        border: 1px solid variables.$mercury;
+        border-radius: 0.25rem;
+
+        &::placeholder {
+            color: variables.$brainflix-black; 
+          }
+    }
+
+    &__cancel-btn {
+        border: none;
+        background-color: white;
+        color: #0095FF;
+        padding: 2rem;
+
+    }
+}
