@@ -96,9 +96,14 @@
 }
 @media (min-width: 768px) {
   .comments__btn {
-    width: 18%;
+    width: 25%;
     height: 3rem;
     margin-left: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__btn {
+    width: 10rem;
   }
 }
 .comments__comments-list {

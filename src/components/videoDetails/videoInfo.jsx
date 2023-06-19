@@ -1,19 +1,44 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import './videoInfo.css';
 
 
 function VideoInfo(props) {
-    const date = new Date(props.selectedVideo.timestamp);
+  const [loading, setLoading] = useState(true);
+  const [ videoinfo, setInfo ] = useState([]);
+
+  useEffect(() => {
+    if (props.selectedVideo) {
+      axios
+        .get(
+          `https://project-2-api.herokuapp.com/videos/${props.selectedVideo.id}?api_key=dilpreetsite`
+        )
+        .then((response) => {
+          setInfo(response.data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log("Error fetching comments:", error);
+        });
+    }
+  }, [props.selectedVideo]);
+
+    if (!props.selectedVideo || loading) {
+        return null; 
+      }
+     
+    const date = new Date(videoinfo.timestamp);
     const formatedDate = date.toLocaleDateString('en-US');
     return (
         <section className='hero-info'>
             <h1 
-            className='hero-info__title'>{props.selectedVideo.title}</h1>
+            className='hero-info__title'>{videoinfo.title}</h1>
             <div
             className='hero-info__wrapper'>
                 <div
                 className='hero-info__wrapper-left'>
                     <h2
-                    className='hero-info__channel'>By {props.selectedVideo.channel}</h2>
+                    className='hero-info__channel'>By {videoinfo.channel}</h2>
                     <p
                     className='hero-info__date'> {formatedDate} </p>
                 </div>
@@ -21,9 +46,9 @@ function VideoInfo(props) {
                 <div
                 className='hero-info__wrapper-right'>
                     <p
-                    className='hero-info__views'> {props.selectedVideo.views} </p>
+                    className='hero-info__views'> {videoinfo.views} </p>
                     <p
-                    className='hero-info__likes'> {props.selectedVideo.likes} </p>
+                    className='hero-info__likes'> {videoinfo.likes} </p>
                 </div>
             </div>
             <div

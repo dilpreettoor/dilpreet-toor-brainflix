@@ -97,10 +97,15 @@
     }
 
     @media (min-width: 768px) {
-      width: 18%;
+      width: 25%;
       height: 3rem;
       margin-left: 2rem;
     }
+
+    @include mixins.desktop {
+      width: 10rem;
+  } 
+
   }
 
   &__comments-list {
