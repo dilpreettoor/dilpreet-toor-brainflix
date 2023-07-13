@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://project-2-api.herokuapp.com/videos?api_key=dilpreetsite');
+        const response = await axios.get('http://localhost:5050/videos');
         setVideosData(response.data);
         setSelectedVideo(response.data[0]); 
       } catch (error) {
