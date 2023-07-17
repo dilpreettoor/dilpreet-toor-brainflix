@@ -29,7 +29,7 @@ const Home = ({ videosData, selectedVideo, handleSelectVideo }) => {
           <VideoInfo selectedVideo={selectedVideo}/>
           <Comments selectedVideo={selectedVideo}/> 
         </div>
-        <div className="side-content">
+        <div className="side-content-right">
           <VideosList selectedVideo={selectedVideo} videos={videosData} handleSelectVideo={handleSelectVideo}/>
         </div>
       </div>

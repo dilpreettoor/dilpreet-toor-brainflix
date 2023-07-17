@@ -9,11 +9,15 @@ $box-sizing: border-box;
 .main-content {
   display: flex;
 
-  .side-content {
-    flex-grow: 1;
-  }
-
   @media screen and (max-width: 1280px) {
     flex-direction: column;
   }
+}
+
+.side-content {
+  width: 65%;
+}
+
+.side-content-right {
+  width: 100%;
 }
