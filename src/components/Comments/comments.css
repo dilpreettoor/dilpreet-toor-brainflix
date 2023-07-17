@@ -59,6 +59,11 @@
     width: 60vw;
   }
 }
+@media (min-width: 1280px) {
+  .comments__form-txt {
+    width: 40vw;
+  }
+}
 .comments__form-txt::-moz-placeholder {
   color: #323232;
   padding: 0.4rem;
