@@ -7,11 +7,16 @@
 .main-content {
   display: flex;
 }
-.main-content .side-content {
-  flex-grow: 1;
-}
 @media screen and (max-width: 1280px) {
   .main-content {
     flex-direction: column;
   }
+}
+
+.side-content {
+  width: 65%;
+}
+
+.side-content-right {
+  width: 100%;
 }/*# sourceMappingURL=App.css.map */

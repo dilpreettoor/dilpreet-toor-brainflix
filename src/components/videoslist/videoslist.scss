@@ -14,6 +14,8 @@
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    
+    
   
     &__title {
       margin-bottom: 2rem;
@@ -28,6 +30,12 @@
       width: 6rem;
       margin-right: 1rem;
       border-radius: 0.4rem;
+      
+
+      @media (min-width: 1280px) {
+        height: 3.7rem;
+        width: 6rem;
+      }
     }
   
     &__video-container {
