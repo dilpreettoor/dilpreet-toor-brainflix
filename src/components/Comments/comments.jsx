@@ -11,7 +11,7 @@ function Comments(props) {
     if (props.selectedVideo) {
       axios
         .get(
-          `https://project-2-api.herokuapp.com/videos/${props.selectedVideo.id}?api_key=dilpreetsite`
+          `http://localhost:5050/videos/${props.selectedVideo.id}`
         )
         .then((response) => {
           setComments(response.data.comments);
