@@ -26,6 +26,12 @@ function Comments(props) {
     return <div>Loading...</div>; 
   }
 
+  const handleCommentBtn = (event) => {
+    event.preventDefault();
+
+    console.log("New Comment added");
+  }
+
 
   
   return (
@@ -40,7 +46,7 @@ function Comments(props) {
           alt="profile picture"
         ></img>
 
-        <form className="comments__form">
+        <form className="comments__form" onSubmit={handleCommentBtn}>
           <div className="comments__form-container">
             <div className="comments__comment-info">
             <h3 className="comments__comment-box-title">JOIN THE CONVERSATION</h3>
