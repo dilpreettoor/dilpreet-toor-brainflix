@@ -26,16 +26,12 @@ function Comments(props) {
     return <div>Loading...</div>; 
   }
 
-  if (comments.length === 0) {
-    return <div>No comments available.</div>; // 
-  }
 
   
   return (
     <section className="comments">
       <h2 className="comments__count">
-        {" "}
-        {comments.length} Comments
+      {comments.length} Comment{comments.length !== 1 ? "s" : ""}
       </h2>
       <div className="comments__wrapper-row">
         <img
